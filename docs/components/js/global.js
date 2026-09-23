@@ -5,7 +5,7 @@ const getBasePath = () => {
     const path = window.location.pathname;
     if (window.location.hostname.includes('github.io')) {
         const parts = path.split('/').filter(Boolean);
-        return `/${parts[0]}/`;
+        return parts.length > 0 ? `/${parts[0]}/` : '/';
     }
     return '/';
 };
@@ -17,9 +17,7 @@ window.ROOT = ROOT;
 // ==========================================
 async function loadComponent(containerId, url) {
     try {
-        const safeRoot = (typeof ROOT !== 'undefined' && ROOT !== 'undefined' && ROOT !== null) ? ROOT : '/';
-        console.log(`Este es rt ${safeRoot}`)
-        const response = await fetch(`${safeRoot}${url}`);
+        const response = await fetch(`${ROOT}${url}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
