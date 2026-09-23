@@ -1,0 +1,54 @@
+[
+  {
+    "category": "Formación SENA",
+    "cards": [
+      {
+        "id": "tecnologo-electronico",
+        "title": "Tecnólogo en Desarrollo de Productos Electrónicos",
+        "description": "Código: 3607890 | Modalidad Virtual",
+        "icon": "cpu",
+        "color": "bg-sena-green",
+        "subItems": [
+          {
+            "label": "Inducción: Infografía Senalogía",
+            "url": "https://martinciro.github.io/tecnologo_electronico/evidencias/inicial/infografia/",
+            "icon": "file-image",
+            "status": "Completado"
+          },
+          {
+            "label": "Foro Temático: Compromiso",
+            "url": "https://zajuna.sena.edu.co/zajuna/course/view.php?id=136423",
+            "icon": "message-square",
+            "status": "Pendiente"
+          },
+          {
+            "label": "Ver todos los recursos del programa",
+            "url": "https://martinciro.github.io/tecnologo_electronico/",
+            "icon": "folder-open",
+            "status": "Ver repositorio"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Portafolio Personal",
+    "cards": [
+      {
+        "id": "proyectos-personales",
+        "title": "Proyectos de Software y Hardware",
+        "description": "Experimentos, automatización y desarrollo web.",
+        "icon": "code-2",
+        "color": "bg-sena-orange",
+        "subItems": [
+          {
+            "label": "Próximamente...",
+            "url": "#",
+            "icon": "clock",
+            "status": "En desarrollo"
+          }
+        ]
+      }
+    ]
+  }
+]
