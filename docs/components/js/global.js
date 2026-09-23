@@ -17,7 +17,9 @@ window.ROOT = ROOT;
 // ==========================================
 async function loadComponent(containerId, url) {
     try {
-        const response = await fetch(`${ROOT}${url}`);
+        const safeRoot = (typeof ROOT !== 'undefined' && ROOT !== 'undefined' && ROOT !== null) ? ROOT : '/';
+
+        const response = await fetch(`${safeRoot}${url}`);
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const html = await response.text();
         document.getElementById(containerId).innerHTML = html;
